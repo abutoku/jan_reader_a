@@ -7,6 +7,9 @@ $(document).ready(()=>{
 $("#my_start").click(()=>{
 	console.log("Start!!");
 
+	// 画像を非表示にする
+	$('#quagga_placeholder').hide();
+
 	// Quagga
 	Quagga.init({
 		inputStream: {
@@ -47,4 +50,7 @@ $("#my_start").click(()=>{
 $("#my_stop").click(()=>{
 	console.log("Stop!!");
 	Quagga.stop();
+
+	// 画像を表示する
+	$('#quagga_placeholder').show();
 });
